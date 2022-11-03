@@ -61,3 +61,20 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 });
 
+document.querySelector("#slider").addEventListener("click", function() {
+	console.log('Slider value is: ' + this.value);
+	video.volume = this.value / 100;
+	document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
+	console.log(video.volume);
+});
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add('oldSchool');
+	console.log('Style is Old School');
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove('oldSchool');
+	console.log('Style is Original');
+});
+
